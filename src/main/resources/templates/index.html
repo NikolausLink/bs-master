@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Control: POST</title>
+</head>
+<body>
+<form method="get" action="/book-add">
+    <input type="submit" value="Create new book"/>
+</form>
+<table>
+    <thead>
+    <th>id</th>
+    <th>title</th>
+    <th>isbn</th>
+    <th>author</th>
+    <th>page</th>
+    </thead>
+    <tbody>
+    <tr th:each="book: ${books}">
+        <td th:text="${book.id}"></td>
+        <td th:text="${book.title}"></td>
+        <td th:text="${book.isbn}"></td>
+        <td th:text="${book.author}"></td>
+        <td th:text="${book.page}"></td>
+    </tr>
+    </tbody>
+</table>
+<form method="get" action="/book-search">
+    Search by Title:
+    <br>
+    <input type="text" name="title">
+    <button type="submit">Search</button>
+</form>
+</body>
+</html>

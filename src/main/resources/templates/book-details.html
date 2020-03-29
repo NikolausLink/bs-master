@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Book Info</title>
+</head>
+<body>
+<h2>BOOK INFO</h2>
+<br>
+BOOK IS ABOUT:
+<th:block th:text="${book.page}"/>
+<br>
+<form method="get" action="/">
+    <button type="submit">To List</button>
+</form>
+</body>
+</html>
